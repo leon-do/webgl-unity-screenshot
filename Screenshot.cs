@@ -6,6 +6,9 @@ using System.Runtime.InteropServices;
 
 public class Screenshot : MonoBehaviour 
 {
+  [DllImport("__Internal")]
+  private static extern void ImageDownloader(string str, string fn);
+    
   void Start() 
   {
     StartCoroutine(CoroutineScreenshot());
